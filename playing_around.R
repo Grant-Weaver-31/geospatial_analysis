@@ -59,6 +59,8 @@ dc_income_2020 <- get_acs(
 plot(dc_income_2020["estimate"])
 
 
+# Is the connection already working? 
+
 
 
 
