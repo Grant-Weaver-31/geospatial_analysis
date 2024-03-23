@@ -14,52 +14,9 @@ total_population_10 <- get_decennial(
   year = 2010
 )
 
-wi_income_2019 <- get_acs(
-  geography = "county", 
-  variables = "B19013_001", 
-  state = "WI",
-  year = 2019,
-  survey = "acs1"
-)
-
-wi_income_2019 %>%
-  arrange(desc(estimate))
-
-wi_income_2022 <- get_acs(
-  geography = "county", 
-  variables = "B19013_001", 
-  state = "WI",
-  year = 2022,
-  survey = "acs1"
-)
-
-wi_income_2022 %>%
-  arrange(desc(estimate))
-
-ohio_county_income_2022 <- get_acs(
-  geography = "county", 
-  variables = "B19013_001", 
-  state = "OH", 
-  year = 2022, 
-  survey = "acs1"
-)
+# This shows that the connection to the census api is working. 
 
 
-ohio_county_income_2022 %>%
-  arrange(desc(estimate))
-
-dc_income_2020 <- get_acs(
-  geography = "tract", 
-  variables = "B19013_001",
-  state = "DC", 
-  year = 2020,
-  geometry = TRUE
-)
-
-plot(dc_income_2020["estimate"])
-
-
-# Is the connection already working? 
 
 
 
